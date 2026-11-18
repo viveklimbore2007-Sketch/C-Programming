@@ -1,0 +1,48 @@
+//////////////////////////////////////
+//
+//  Name : Vivek Vilas Limbore
+//  Problem : Accept number of rows and columns from user and display below patter
+//
+//////////////////////////////////////
+//
+//  Input : row : 4 Col : 4
+//  Output : * * * *
+//           * * *
+//           * * 
+//           * 
+//
+//////////////////////////////////////
+
+
+#include<stdio.h>
+#include<stdlib.h>
+
+void Pattern(int iRow, int iCol)
+{
+    int i = 0, j = 0;
+
+    for(i = 1; i <= iRow; i++)
+    {
+        for(j = iCol; j >= i; j--)
+        {
+            printf("*\t");
+        }
+
+        printf("\n");
+    }
+}
+
+int main()
+{
+    int iRow = 0, iCol = 0;
+
+    printf("Enter number of rows : ");
+    scanf("%d", &iRow);
+
+    printf("Enter number of columns : ");
+    scanf("%d", &iCol);
+
+    Pattern(iRow, iCol);
+
+    return EXIT_SUCCESS;
+}
